@@ -1,0 +1,50 @@
+#! /bin/sh
+
+./autostart &
+
+# Set the border colors.
+bspc config normal_border_color "$color1"
+bspc config active_border_color "$color5"
+bspc config focused_border_color "$color15"
+# Use the line below if you are on bspwm >= 0.9.4
+bspc config presel_feedback_color "$color1"
+# Use the line below if you are on bspwm < 0.9.4
+#bspc config presel_border_color "$color1"
+
+
+bspc monitor -d 1 2 3 4 5 6 7 8 9 0
+
+
+bspc config border_width		3
+bspc config window_gap			13
+bspc config top_padding         45
+
+bspc config split_ratio			0.52
+bspc config borderless_monocle	true
+bspc config gapless_monocle		true
+bspc config click_to_focus		true
+
+## Colores
+#bspc config active_border_color     '#AE3927'
+#bspc config focused_border_color    '#AE3927'
+#bspc config normal_border_color     '#ADADA5'
+#bspc config presel_border_color     '#0f8c61'
+#bspc config urgent_border_color     '#922230'
+
+## Ventanas y espacios
+# Asignar ventanas a espacios
+
+bspc rule --add Firefox-desktop desktop=^0
+bspc rule --add VSCodium desktop=^9
+
+#bspc rule -a Kupfer.py focus=on
+#bspc rule -a Screenkey manage=off
+# Ventanas flotantes
+bspc rule -a mpv state=floating
+bspc rule -a libreoffice state=tiling
+bspc rule -a feh state=floating
+bspc rule -a oblogout state=floating
+bspc rule -a File-roller state=floating
+bspc rule -a lxappearance state=floating
+bspc rule -a obconf state=floating
+bspc rule -a nvidia-settings state=floating

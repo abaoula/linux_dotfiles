@@ -1,0 +1,111 @@
+! ------------------------------------------------------------------------------
+! Import Colour from ~/.xrdb
+! ------------------------------------------------------------------------------
+
+#include ".xrdb/color/xcolors-number-six.Xresources"
+#include ".xrdb/rofi/nord"
+#include ".xrdb/dmenu/nord"
+#include ".xrdb/fonts/tewi"
+
+! ------------------------------------------------------------------------------
+! Fonts
+! ------------------------------------------------------------------------------
+
+!Courier
+!URxvt.font: xft:Courier-10
+
+!Inconsolata
+!URxvt.font: xft:Inconsolata-14
+!URxvt.boldFont: xft:Inconsolata-14
+!URxvt.letterSpace: -1
+
+!Fira
+!Urxvt.font: xft:Fira Code:pixelsize=16:antialias=true:autohint=true
+!URxvt.letterSpace: -1
+
+!Inconsolata-g
+!URxvt.font: xft: Inconsolata-g for Powerline-12
+!URxvt.letterSpace: -1
+
+!Anonymous Pro
+!URxvt.font: xft:Anonymous\ Pro-18
+!URxvt.letterSpace: -1
+
+!Droid Sans Mono
+!URxvt.font: xft:FuraCode Nerd Font Mono:pixesize=16:style=Regular:antialias=true
+!URxvt.boldFont: xft:FuraCode Nerd Font Mono Bold:pixelsize=16:antialias=false
+!URxvt.letterSpace: -1
+
+!Iosevka
+URxvt.font: xft:Iosevka Term:style=Regular:pixelsize=21:antialias=true:hinting=true
+URxvt.letterSpace: -1
+
+!Monaco
+!URxvt.font: xft:Monaco-10
+!URxvt.letterSpace: -1
+
+!Noto Sans Mono
+!URxvt.font: xft:Noto Sans Mono-13
+!URxvt.letterSpace: -1
+
+!DejaVu Sans
+!URxvt.font: xft:DejaVu Sans Mono-12
+!URxvt.letterSpace: -1
+
+!Source code Pro
+!URxvt*font: xft:Source Code Pro Medium:size=11
+!URxvt.boldFont: xft:Source Code Pro Bold:size=11
+!URxvt.letterSpace: 1
+
+!Monospace
+!URxvt.font: xft:Monospace-10
+!URxvt.letterSpace: -1
+
+!Terminus
+!URxvt.font: xft:Terminus-13
+
+
+! ------------------------------------------------------------------------------
+! URxvt configs
+! ------------------------------------------------------------------------------
+
+
+URxvt.geometry: 		72x18
+!URxvt*letterSpace: 	    -1
+URxvt.lineSpace: 		0
+URxvt*internalBorder:   46
+URxvt*externalBorder:   0
+URxvt*depth:            32
+URxvt*saveline:         2000
+URxvt*termName:         rxvt-256color
+URxvt*iso14755:         false
+URxvt*scrollBar:        false
+URxvt*scrollBar_right:  false
+URxvt.copyCommand:      xclip -i -selection clipboard
+URxvt.pasteCommand:     xclip -o -selection clipboard
+URxvt.keysym.M-c:       perl:clipboard:copy
+URxvt.keysym.M-v:       perl:clipboard:paste
+URxvt.keysym.M-C-v:     perl:clipboard:paste_escaped
+URxvt.keysym.M-Escape:  perl:keyboard-select:activate
+URxvt.keysym.Shift-Up:	command:\033]720;1\007
+URxvt.keysym.Shift-Down:command:\033]721;1\007
+URxvt.keysym.M-s:       perl:keyboard-select:search
+URxvt.keysym.M-u:       perl:url-select:select_next
+URxvt.urlLauncher:      firefox
+URxvt.underlineURLs:    true
+URxvt.urlButton:        1
+URxvt*buffered:         false          
+URxvt.urgentOnBell: 	True
+
+! ------------------------------------------------------------------------------
+! Xft Font Configuration
+! ------------------------------------------------------------------------------
+
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+Xcursor.size: 16
+Xft.dpi: 96
